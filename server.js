@@ -16,7 +16,7 @@ app.get('/greeting/:name', (req, res) => {
 });
 
 app.get('/tip/:total/:tipPercentage', (req, res) => {
-    res.send("Your tip is " + req.params.total/req.params.tipPercentage);
+    res.send("Your tip is " + req.params.total*(req.params.tipPercentage/100));
 });
 
 app.get('/magic/:phrase/', (req, res) => {
